@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slam Dunk Store</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23FF5500'/%3E%3Cpath d='M2 32h60M32 2c10 8 16 18 16 30S42 54 32 62M32 2C22 10 16 20 16 32s6 22 16 30' stroke='%23111111' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                orange: '#FF5500', // Deep vibrant orange
+                dark: '#050505',   // Almost black
+                gray: '#1F1F1F'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Anton', 'sans-serif'],
+            },
+            boxShadow: {
+              'glow': '0 0 20px rgba(255, 85, 0, 0.5)',
+              'inner-lg': 'inset 0 0 50px rgba(0,0,0,0.8)'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body, html { margin: 0; padding: 0; overflow: hidden; height: 100%; background-color: #FF5500; }
+      .text-outline {
+        -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+        color: transparent;
+      }
+      /* Custom scrollbar hide */
+      ::-webkit-scrollbar { display: none; }
+      
+      /* Smooth fade in */
+      .fade-in { animation: fadeIn 1s ease-out forwards; opacity: 0; }
+      @keyframes fadeIn { to { opacity: 1; } }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "three": "https://esm.sh/three@^0.182.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@^9.5.0",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@^10.7.7",
+    "gsap": "https://esm.sh/gsap@^3.14.2",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./js/index.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
